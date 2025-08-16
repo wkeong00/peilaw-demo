@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import DynamicLucideIcon from './DynamicLucideIcon'; // Import the new dynamic icon component
+import Link from "next/link";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,16 +19,16 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-800 to-blue-600 text-white shadow-lg z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Brand/Logo */}
-        <a href="/" className="flex items-center space-x-2 text-2xl font-bold text-white tracking-wide">
+        <Link href="/" className="flex items-center space-x-2 text-2xl font-bold text-white tracking-wide">
           {/* Use the new DynamicLucideIcon component */}
           <DynamicLucideIcon name="Home" size={28} />
           <span>Pei ling law firm</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               className="flex items-center space-x-2 text-white hover:text-blue-200 transition-colors duration-300 font-medium px-3 py-2 rounded-lg"
@@ -35,7 +37,7 @@ const Navbar = () => {
               {/* Use the new DynamicLucideIcon component */}
               <DynamicLucideIcon name={link.iconName as any} size={18} />
               <span>{link.name}</span>
-            </a>
+            </Link>
           ))}
         </div>
 
