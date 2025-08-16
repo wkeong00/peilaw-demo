@@ -28,14 +28,14 @@
         <section id="about" className="py-20 bg-slate-50 text-slate-800">
           <div className="container mx-auto px-4">
             <h2 className="text-5xl font-extrabold text-center mb-16 text-blue-800 leading-tight">
-              About <span className="text-blue-600">Sterling & Associates</span>
+              About <span className="text-blue-600">Pei ling law firm</span>
             </h2>
 
             {/* Our Firm Section */}
             <div className="bg-white p-10 rounded-xl shadow-lg mb-20">
               <h3 className="text-4xl font-bold text-blue-700 mb-6 border-b-4 border-blue-500 pb-2">Our Firm</h3>
               <p className="text-lg leading-relaxed mb-6">
-                Sterling & Associates is a distinguished law firm committed to providing exceptional legal services to individuals and businesses alike. Founded on the principles of integrity, excellence, and client-centric advocacy, we pride ourselves on delivering strategic and effective solutions tailored to meet the unique needs of each client.
+                Pei ling law firm is a distinguished law firm committed to providing exceptional legal services to individuals and businesses alike. Founded on the principles of integrity, excellence, and client-centric advocacy, we pride ourselves on delivering strategic and effective solutions tailored to meet the unique needs of each client.
               </p>
               <p className="text-lg leading-relaxed">
                 With decades of combined experience, our team of dedicated legal professionals brings a wealth of knowledge across various practice areas. We believe in building strong, lasting relationships with our clients, offering clear communication, unwavering support, and unwavering dedication to achieving the best possible outcomes. Your success is our paramount concern.
@@ -52,7 +52,11 @@
                       src={member.image}
                       alt={member.name}
                       className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-400 shadow-md"
-                      onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/150x150/CCE5FF/000000?text=👤" }} // Fallback image
+                      onError={(e) => { 
+                        const target = e.target as HTMLImageElement;
+                        target.onerror = null;
+                        target.src = "https://placehold.co/150x150/CCE5FF/000000?text=👤";
+                      }} // Fallback image
                     />
                     <h4 className="text-2xl font-semibold text-blue-800 mb-2">{member.name}</h4>
                     <p className="text-blue-600 font-medium mb-4">{member.title}</p>

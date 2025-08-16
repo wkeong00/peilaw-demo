@@ -1,16 +1,16 @@
-'use client';
+'use client'; // This component uses useState, so it must be a Client Component
 
 import React, { useState } from 'react';
-import { Home, Info, Handshake, Mail } from 'lucide-react';
+import DynamicLucideIcon from './DynamicLucideIcon'; // Import the new dynamic icon component
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '/', icon: <Home size={18} /> }, // Added Home link
-    { name: 'About', href: '/about', icon: <Info size={18} /> },
-    { name: 'Services', href: '/services', icon: <Handshake size={18} /> },
-    { name: 'Contact', href: '/contact', icon: <Mail size={18} /> },
+    { name: 'Home', href: '/', iconName: 'Home' },
+    { name: 'About', href: '/about', iconName: 'Info' },
+    { name: 'Services', href: '/services', iconName: 'Handshake' },
+    { name: 'Contact', href: '/contact', iconName: 'Mail' },
   ];
 
   return (
@@ -18,8 +18,9 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Brand/Logo */}
         <a href="/" className="flex items-center space-x-2 text-2xl font-bold text-white tracking-wide">
-          <Home size={28} />
-          <span>Sterling & Associates</span>
+          {/* Use the new DynamicLucideIcon component */}
+          <DynamicLucideIcon name="Home" size={28} />
+          <span>Pei ling law firm</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -29,9 +30,10 @@ const Navbar = () => {
               key={link.name}
               href={link.href}
               className="flex items-center space-x-2 text-white hover:text-blue-200 transition-colors duration-300 font-medium px-3 py-2 rounded-lg"
-              onClick={() => setIsOpen(false)} // Close menu on click for desktop too, though not strictly necessary
+              onClick={() => setIsOpen(false)}
             >
-              {link.icon}
+              {/* Use the new DynamicLucideIcon component */}
+              <DynamicLucideIcon name={link.iconName as any} size={18} />
               <span>{link.name}</span>
             </a>
           ))}
@@ -42,6 +44,9 @@ const Navbar = () => {
           className="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-md p-2"
           onClick={() => setIsOpen(!isOpen)}
         >
+          {/* Using a simple SVG for the hamburger icon for consistency,
+              as it's a fixed element and doesn't need dynamic loading
+              to avoid potential hydration issues. */}
           <svg
             className="w-8 h-8"
             fill="none"
@@ -67,9 +72,10 @@ const Navbar = () => {
               key={link.name}
               href={link.href}
               className="block px-8 py-3 text-white hover:bg-blue-600 transition-colors duration-300 flex items-center space-x-3 text-lg"
-              onClick={() => setIsOpen(false)} // Close menu on click
+              onClick={() => setIsOpen(false)}
             >
-              {link.icon}
+              {/* Use the new DynamicLucideIcon component */}
+              <DynamicLucideIcon name={link.iconName as any} size={18} />
               <span>{link.name}</span>
             </a>
           ))}

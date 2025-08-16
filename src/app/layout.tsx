@@ -39,7 +39,7 @@
     const inter = Inter({ subsets: ['latin'] });
 
     export const metadata = {
-      title: 'Sterling & Associates Law Firm',
+      title: 'Pei Lings Law Firm',
       description: 'Expert legal services for corporate, family, criminal, real estate, IP, and litigation needs.',
     };
 
@@ -54,12 +54,12 @@
             {/* Navbar is rendered globally here */}
             <Navbar />
             {/* Main content area, padding-top to offset fixed navbar height (h-16 -> 4rem). */}
-            <main className="pt-20">
+            <main className="pt-10 ">
               {children} {/* This is where your page.tsx content will be rendered */}
             </main>
             {/* Footer is rendered globally here */}
             <footer className="mt-20 py-8 text-center text-sm text-slate-500 bg-slate-100 text-slate-500 border-t border-slate-200">
-              © {new Date().getFullYear()} Sterling & Associates
+              © {new Date().getFullYear()} Pei ling law firm
             </footer>
           </body>
         </html>

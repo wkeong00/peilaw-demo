@@ -39,7 +39,7 @@ const HomePage = () => {
             Who We <span className="text-blue-600">Are</span>
           </h2>
           <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto mb-12">
-            Sterling & Associates is a dynamic and client-focused law firm dedicated to upholding justice and providing exceptional legal counsel. With a legacy of integrity and a forward-thinking approach, we serve individuals and businesses with unparalleled commitment and expertise.
+            Pei ling law firm is a dynamic and client-focused law firm dedicated to upholding justice and providing exceptional legal counsel. With a legacy of integrity and a forward-thinking approach, we serve individuals and businesses with unparalleled commitment and expertise.
           </p>
           <a
             href="/about"
