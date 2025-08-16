@@ -59,7 +59,7 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-blue-100">
               <div className="p-4 bg-blue-100 rounded-full mb-6 shadow-inner">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
               </div>
               <h3 className="text-2xl font-bold text-blue-700 mb-4">Unmatched Expertise</h3>
               <p className="text-md leading-relaxed text-slate-700">
@@ -68,7 +68,7 @@ const HomePage = () => {
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-blue-100">
               <div className="p-4 bg-blue-100 rounded-full mb-6 shadow-inner">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2L12 5.5L10.5 3C9 0.5 7.24 0 5.5 0A5.5 5.5 0 0 0 0 5.5c0 2.3 1.5 4.05 3 5.5L12 22Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2L12 5.5L10.5 3C9 0.5 7.24 0 5.5 0A5.5 5.5 0 0 0 0 5.5c0 2.3 1.5 4.05 3 5.5L12 22Z" /></svg>
               </div>
               <h3 className="text-2xl font-bold text-blue-700 mb-4">Client-Centric Approach</h3>
               <p className="text-md leading-relaxed text-slate-700">
@@ -77,7 +77,7 @@ const HomePage = () => {
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-blue-100">
               <div className="p-4 bg-blue-100 rounded-full mb-6 shadow-inner">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
               </div>
               <h3 className="text-2xl font-bold text-blue-700 mb-4">Integrity & Trust</h3>
               <p className="text-md leading-relaxed text-slate-700">
