@@ -5,46 +5,46 @@ import { Briefcase, Gavel, Users, Building, Lightbulb, Scale } from 'lucide-reac
 
 const Services = () => {
     const lawServices = [
-        {
-            title: 'Corporate & Business Law',
-            description: 'We provide comprehensive legal counsel for businesses, from startups to large corporations, covering formation, contracts, mergers & acquisitions, and corporate governance.',
-            icon: <Briefcase size={40} className="text-blue-500" />,
-        },
+        // {
+        //     title: 'Corporate & Business Law',
+        //     description: 'We provide comprehensive legal counsel for businesses, from startups to large corporations, covering formation, contracts, mergers & acquisitions, and corporate governance.',
+        //     icon: <Briefcase size={40} className="text-blue-500" />,
+        // },
         {
             title: 'Family Law',
-            description: 'Navigating sensitive family matters requires compassion and expertise. We assist with divorce, child custody, spousal support, adoption, and prenuptial agreements.',
+            description: 'We provide compassionate and expert legal assistance in divorce, property settlements, and parenting matters, guiding you through sensitive family issues with care and professionalism.',
             icon: <Users size={40} className="text-blue-500" />, // Icon changed to Users
         },
         {
-            title: 'Criminal Defense',
-            description: 'Our experienced team defends clients against a wide range of criminal charges, ensuring their rights are protected throughout the legal process, from investigation to trial.',
+            title: 'Conveyancing',
+            description: 'With our expertise, we aim to simplify the conveyancing process, safeguarding your interests throughout the property transaction.',
             icon: <Gavel size={40} className="text-blue-500" />,
         },
         {
-            title: 'Real Estate Law',
-            description: 'From residential purchases to complex commercial developments, we offer legal guidance on property transactions, zoning, landlord-tenant disputes, and real estate litigation.',
+            title: 'Migration Law',
+            description: 'We assist clients with various visa applications, permanent residency processes, and appeals, navigating the complexities of Australian immigration law with expertise.',
             icon: <Building size={40} className="text-blue-500" />,
         },
         {
-            title: 'Intellectual Property',
-            description: 'Protecting your innovations is crucial. We handle trademarks, copyrights, patents, licensing agreements, and intellectual property litigation to safeguard your creative assets.',
+            title: 'Employment Law',
+            description: 'We offer trusted legal advice on workplace rights, unfair dismissal, and discrimination, advocating for fair treatment in employment matters.',
             icon: <Lightbulb size={40} className="text-blue-500" />,
         },
-        {
-            title: 'Litigation & Dispute Resolution',
-            description: 'When disputes arise, our skilled litigators represent clients in civil disputes, commercial litigation, and alternative dispute resolution methods, seeking efficient and favorable outcomes.',
-            icon: <Scale size={40} className="text-blue-500" />,
-        },
+        // {
+        //     title: 'Litigation & Dispute Resolution',
+        //     description: 'When disputes arise, our skilled litigators represent clients in civil disputes, commercial litigation, and alternative dispute resolution methods, seeking efficient and favorable outcomes.',
+        //     icon: <Scale size={40} className="text-blue-500" />,
+        // },
     ];
 
     return (
         <section id="services" className="py-20 bg-gradient-to-br from-blue-50 to-white text-slate-800">
             <div className="container mx-auto px-4">
                 <h2 className="text-5xl font-extrabold text-center mb-16 text-blue-800 leading-tight">
-                    Our <span className="text-blue-600">Legal Services</span>
+                    Our <span className="text-blue-600">Practice Areas</span>
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                     {lawServices.map((service, index) => (
                         <div
                             key={index}

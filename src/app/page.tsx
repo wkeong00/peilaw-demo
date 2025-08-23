@@ -1,4 +1,5 @@
 import React from 'react';
+import { Heart,Users, } from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -7,7 +8,7 @@ const HomePage = () => {
       <section className="relative bg-gradient-to-r from-blue-800 to-blue-600 text-white py-24 md:py-32 overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
-            Your Trusted Partner in <span className="text-blue-200">Legal Excellence</span>
+            Your legal needs, <span className="text-blue-200">our trusted excellence.</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in-up">
             Providing comprehensive and compassionate legal solutions tailored to your unique needs.
@@ -16,7 +17,7 @@ const HomePage = () => {
             href="/contact"
             className="inline-block bg-white text-blue-800 hover:bg-blue-100 font-semibold py-4 px-10 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl text-lg animate-scale-in"
           >
-            Schedule a Consultation
+            Book an appointment
           </a>
         </div>
         {/* Background Overlay for effect */}
@@ -39,7 +40,10 @@ const HomePage = () => {
             Who We <span className="text-blue-600">Are</span>
           </h2>
           <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto mb-12">
-            Pei ling law firm is a dynamic and client-focused law firm dedicated to upholding justice and providing exceptional legal counsel. With a legacy of integrity and a forward-thinking approach, we serve individuals and businesses with unparalleled commitment and expertise.
+            At Cao Legal Solutions, you are more than just a case — you are heard, understood, and represented with integrity. Led by a principal lawyer from a migrant background, we bring a deep understanding of cultural diversity and lived experience into every matter we handle.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto mb-12">
+            Whether you are navigating a complex legal issue, seeking guidance on your rights, or need someone who truly speaks your language — we are here to help.
           </p>
           <a
             href="/about"
@@ -59,29 +63,29 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-blue-100">
               <div className="p-4 bg-blue-100 rounded-full mb-6 shadow-inner">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+                <Heart size={40} className="text-blue-500" />
               </div>
-              <h3 className="text-2xl font-bold text-blue-700 mb-4">Unmatched Expertise</h3>
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Compassion</h3>
               <p className="text-md leading-relaxed text-slate-700">
-                Our team comprises highly skilled attorneys with deep knowledge across diverse legal fields, ensuring you receive the best possible representation.
+                We listen closely and care deeply about your unique situation, ensuring you feel supported throughout your legal journey.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-blue-100">
               <div className="p-4 bg-blue-100 rounded-full mb-6 shadow-inner">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2L12 5.5L10.5 3C9 0.5 7.24 0 5.5 0A5.5 5.5 0 0 0 0 5.5c0 2.3 1.5 4.05 3 5.5L12 22Z" /></svg>
+                <Users size={40} className="text-blue-500" />
               </div>
-              <h3 className="text-2xl font-bold text-blue-700 mb-4">Client-Centric Approach</h3>
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Leadership</h3>
               <p className="text-md leading-relaxed text-slate-700">
-                Your needs are our priority. We listen, understand, and strategize with you, providing personalized attention and transparent communication.
+                Our experienced team takes charge with confidence and expertise, guiding you through complex legal challenges with clarity and vision.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-blue-100">
               <div className="p-4 bg-blue-100 rounded-full mb-6 shadow-inner">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
               </div>
-              <h3 className="text-2xl font-bold text-blue-700 mb-4">Integrity & Trust</h3>
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">Strength</h3>
               <p className="text-md leading-relaxed text-slate-700">
-                We operate with the highest ethical standards, building relationships based on trust and a commitment to justice.
+                We stand firmly by your side, advocating with determination to protect your rights and secure the best outcome for you.
               </p>
             </div>
           </div>

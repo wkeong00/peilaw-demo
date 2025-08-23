@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 import DynamicLucideIcon from './DynamicLucideIcon'; // Import the new dynamic icon component
 import Link from "next/link";
-
+import Heart from "lucide-react"; // Importing Heart icon directly for demonstration
+import Image from "next/image";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,8 +28,8 @@ const Navbar = () => {
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                 {/* Brand/Logo */}
                 <Link href="/" className="flex items-center space-x-2 text-2xl font-bold text-white tracking-wide">
-                    <DynamicLucideIcon name="Home" size={28} />
-                    <span>Pei ling law firm</span>
+                    <Image src="/vercel.svg" alt="Logo" width={32} height={32} />
+                    <span>Cao Legal Solutions</span>
                 </Link>
 
                 {/* Desktop Navigation */}
