@@ -1,26 +1,19 @@
 'use client'; // This component uses useState, so it must be a Client Component
 
 import React, { useState } from 'react';
-import DynamicLucideIcon from './DynamicLucideIcon'; // Import the new dynamic icon component
+
 import Link from "next/link";
-import Heart from "lucide-react"; // Importing Heart icon directly for demonstration
 import Image from "next/image";
+import { Home, Info, Handshake, Mail } from "lucide-react";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    type LucideIconName =
-        | "Home"
-        | "Info"
-        | "Handshake"
-        | "Contact"
-        | "Mail";
-
-    const navLinks: { name: string; href: string; iconName: LucideIconName }[] = [
-        { name: 'Home', href: '/', iconName: 'Home' },
-        { name: 'About', href: '/about', iconName: 'Info' },
-        { name: 'Services', href: '/services', iconName: 'Handshake' },
-        { name: 'Contact', href: '/contact', iconName: 'Mail' },
+    const navLinks: { name: string; href: string; icon: React.ReactNode }[] = [
+        { name: 'Home', href: '/', icon: <Home size={18} /> },
+        { name: 'About', href: '/about', icon: <Info size={18} /> },
+        { name: 'Services', href: '/services', icon: <Handshake size={18} /> },
+        { name: 'Contact', href: '/contact', icon: <Mail size={18} /> },
     ];
 
     return (
@@ -41,7 +34,7 @@ const Navbar = () => {
                             className="flex items-center space-x-2 text-white hover:text-blue-200 transition-colors duration-300 font-medium px-3 py-2 rounded-lg"
                             onClick={() => setIsOpen(false)}
                         >
-                            <DynamicLucideIcon name={link.iconName} size={18} /> {/* No more 'as any' */}
+                            {link.icon}
                             <span>{link.name}</span>
                         </Link>
                     ))}
@@ -74,15 +67,15 @@ const Navbar = () => {
             {isOpen && (
                 <div className="md:hidden bg-blue-700 pb-4 shadow-inner">
                     {navLinks.map((link) => (
-                        <a
+                        <Link
                             key={link.name}
                             href={link.href}
                             className="block px-8 py-3 text-white hover:bg-blue-600 transition-colors duration-300 flex items-center space-x-3 text-lg"
                             onClick={() => setIsOpen(false)}
                         >
-                            <DynamicLucideIcon name={link.iconName} size={18} /> {/* No more 'as any' */}
+                            {link.icon}
                             <span>{link.name}</span>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             )}
