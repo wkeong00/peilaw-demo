@@ -37,7 +37,7 @@ const About = () => {
                 <div className="bg-white p-10 rounded-xl shadow-lg mb-20">
                     <h3 className="text-4xl font-bold text-blue-700 mb-6 border-b-4 border-blue-500 pb-2">Our Firm</h3>
                     <p className="text-lg leading-relaxed mb-6">
-                        At Cao Legal Solutions, we are committed to providing comprehensive and compassionate legal solutions tailored to the unique needs of individuals and businesses. Driven by values. Defined by service. Founded on principles of compassion, leadership, and strength, we pride ourselves on delivering strategic and effective solutions that align with our clients' objectives. 
+                        At Cao Legal Solutions, we are committed to providing comprehensive and compassionate legal solutions tailored to the unique needs of individuals and businesses. Driven by values. Defined by service. Founded on principles of compassion, leadership, and strength, we pride ourselves on delivering strategic and effective solutions that align with our clients&apos; objectives. 
                     </p>
                     <p className="text-lg leading-relaxed">
                         We believe in building strong, lasting relationships through clear communication, unwavering support, and a steadfast commitment to achieving the best possible outcomes. Your success is our paramount concern.

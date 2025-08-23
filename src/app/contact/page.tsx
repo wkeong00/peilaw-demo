@@ -1,6 +1,6 @@
 'use client'; // This component uses useState, so it must be a Client Component
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Contact() {

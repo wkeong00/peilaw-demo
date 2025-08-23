@@ -1,7 +1,7 @@
 'use client'; // Marking as client component for consistency
 
 import React from 'react';
-import { Briefcase, Gavel, Users, Building, Lightbulb, Scale } from 'lucide-react';
+import {Gavel, Users, Building, Lightbulb, } from 'lucide-react';
 
 const Services = () => {
     const lawServices = [
