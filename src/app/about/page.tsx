@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from "next/image";
-import p5 from "../../../public/aboutphoto/p-5.jpeg";
+import pei1 from "../../../public/aboutphoto/peilingimg.jpg";
 
 const About = () => {
     const teamMembers = [
@@ -10,7 +10,7 @@ const About = () => {
             name: 'Pei Ling Cao ',
             title: 'Principal',
             bio: 'Pei Ling Cao is the Principal at Cao Legal Solutions, bringing a wealth of experience and a client-centered approach to every case. With a strong background in family law, Pei has also developed expertise across a diverse range of practice areas, including migration law, debt recovery, property conveyancing, and employment law. Fluent in Mandarin, Cantonese, and Bahasa, Pei is dedicated to bridging cultural and linguistic gaps, ensuring clear communication and effective representation for clients from diverse backgrounds. Driven by a commitment to serve the multicultural community, Pei founded Cao Legal Solutions to provide accessible and comprehensive legal services that address the unique needs of each client.',
-            image: p5,
+            image: pei1,
         },
         // {
         //     name: 'Sarah Chen',
@@ -64,8 +64,8 @@ const About = () => {
                                     }} // Fallback image
                                 />
                                 <h4 className="text-2xl font-semibold text-blue-800 mb-2">{member.name}</h4>
-                                <p className="text-blue-600 font-medium mb-4">{member.title}</p>
-                                <p className="text-md leading-relaxed text-slate-700">{member.bio}</p>
+                                <p className="text-black-700 font-bold text-lg mb-4">{member.title}</p>
+                                <p className="text-md leading-relaxed text-slate-700 text-left md:text-center whitespace-pre-line">{member.bio}</p>
                             </div>
                         ))}
                     </div>
