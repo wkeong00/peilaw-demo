@@ -9,7 +9,7 @@ const About = () => {
         {
             name: 'Pei Ling Cao ',
             title: 'Principal',
-            bio: 'Pei Ling Cao is the Principal at Cao Legal Solutions, bringing a wealth of experience and a client-centered approach to every case. With a strong background in family law, Pei has also developed expertise across a diverse range of practice areas, including migration law, debt recovery, property conveyancing, and employment law. Fluent in Mandarin, Cantonese, and Bahasa, Pei is dedicated to bridging cultural and linguistic gaps, ensuring clear communication and effective representation for clients from diverse backgrounds. Driven by a commitment to serve the multicultural community, Pei founded Cao Legal Solutions to provide accessible and comprehensive legal services that address the unique needs of each client.',
+            bio: 'Pei Ling Cao is the Principal at Cao Legal Solutions, bringing a wealth of experience and a client-centered approach to every case. With a strong background in family law, Pei has also developed expertise across a diverse range of practice areas, including migration law, debt recovery, property conveyancing, and employment law. Fluent in English, Mandarin, Cantonese, and Bahasa, Pei is dedicated to bridging cultural and linguistic gaps, ensuring clear communication and effective representation for clients from diverse backgrounds. Driven by a commitment to serve the multicultural community, Pei founded Cao Legal Solutions to provide accessible and comprehensive legal services that address the unique needs of each client.',
             image: pei1,
         },
         // {
@@ -27,26 +27,26 @@ const About = () => {
     ];
 
     return (
-        <section id="about" className="py-20 bg-slate-50 text-slate-800">
+    <section id="about" className="py-20 bg-gradient-to-br from-yellow-50 to-white text-slate-800">
             <div className="container mx-auto px-4">
-                <h2 className="text-5xl font-extrabold text-center mb-16 text-blue-800 leading-tight">
-                    About <span className="text-blue-600">Cao Legal Solutions</span>
+                <h2 className="text-5xl font-extrabold text-center mb-16 leading-tight bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
+                    About <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">Cao Legal Solutions</span>
                 </h2>
 
                 {/* Our Firm Section */}
                 <div className="bg-white p-10 rounded-xl shadow-lg mb-20">
-                    <h3 className="text-4xl font-bold text-blue-700 mb-6 border-b-4 border-blue-500 pb-2">Our Firm</h3>
+                    <h3 className="text-4xl font-bold mb-6 pb-2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent border-b-4 border-yellow-400">Our Firm</h3>
                     <p className="text-lg leading-relaxed mb-6">
-                        At Cao Legal Solutions, we are committed to providing comprehensive and compassionate legal solutions tailored to the unique needs of individuals and businesses. Driven by values. Defined by service. Founded on principles of compassion, leadership, and strength, we pride ourselves on delivering strategic and effective solutions that align with our clients&apos; objectives. 
+                        At Cao Legal Solutions, we are here to offer legal help that truly fits you—whether you are an individual or a business. We are guided by values that matter and built on principles of compassion, leadership, and strength. What drives us is more than just providing solutions; it is about finding the right solutions that work for your unique situation.
                     </p>
                     <p className="text-lg leading-relaxed">
-                        We believe in building strong, lasting relationships through clear communication, unwavering support, and a steadfast commitment to achieving the best possible outcomes. Your success is our paramount concern.
+                        We believe in building real, lasting relationships by communicating clearly, supporting you every step of the way, and staying committed to getting the best results possible. Your success means everything to us.
                     </p>
                 </div>
 
                 {/* Our Team Section */}
                 <div className="bg-white p-10 rounded-xl shadow-lg">
-                    <h3 className="text-4xl font-bold text-blue-700 mb-10 border-b-4 border-blue-500 pb-2 text-center md:text-left">Our Team</h3>
+                    <h3 className="text-4xl font-bold mb-10 pb-2 text-center md:text-left bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent border-b-4 border-yellow-400">Our Team</h3>
                     {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"> */}
                     <div className="grid grid-cols-1 gap-10">
                         {teamMembers.map((member, index) => (
@@ -56,15 +56,15 @@ const About = () => {
                                     alt={member.name}
                                     width={128}
                                     height={128}
-                                    className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-blue-400 shadow-md"
+                                    className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-yellow-400 shadow-md"
                                     onError={(e) => {
                                         const target = e.target as HTMLImageElement;
                                         target.onerror = null;
-                                        target.src = "https://placehold.co/150x150/CCE5FF/000000?text=👤";
+                                        target.src = "https://placehold.co/150x150/FFE066/000000?text=👤";
                                     }} // Fallback image
                                 />
-                                <h4 className="text-2xl font-semibold text-blue-800 mb-2">{member.name}</h4>
-                                <p className="text-black-700 font-bold text-lg mb-4">{member.title}</p>
+                                <h4 className="text-2xl font-semibold mb-2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">{member.name}</h4>
+                                <p className="font-bold text-lg mb-4 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">{member.title}</p>
                                 <p className="text-md leading-relaxed text-slate-700 text-left md:text-center whitespace-pre-line">{member.bio}</p>
                             </div>
                         ))}

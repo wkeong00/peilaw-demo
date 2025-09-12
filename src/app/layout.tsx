@@ -32,36 +32,35 @@
 //     </html>
 //   );
 // }
-    import './globals.css'; // Next.js's default global CSS with Tailwind directives
-    import Navbar from './component/Navbar'; // Adjust path if your components folder is elsewhere
+import './globals.css'; // Next.js's default global CSS with Tailwind directives
+import Navbar from './component/Navbar'; // Adjust path if your components folder is elsewhere
     import { Inter } from 'next/font/google';
 
-    const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
 
-    export const metadata = {
-      title: 'Cao Legal Solutions',
-      description: 'Expert legal services for corporate, family, criminal, real estate, IP, and litigation needs.',
-    };
+export const metadata = {
+  title: 'Cao Legal Solutions',
+  description: 'Expert legal services for corporate, family, criminal, real estate, IP, and litigation needs.',
+};
 
-    export default function RootLayout({
-      children,
-    }: {
-      children: React.ReactNode;
-    }) {
-      return (
-        <html lang="en">
-<body className={`${inter.className} min-h-screen bg-slate-50 text-slate-800 flex flex-col`}>            {/* Navbar is rendered globally here */}
-            <Navbar />
-            {/* Main content area, padding-top to offset fixed navbar height (h-16 -> 4rem). */}
-            <main className="pt-10 flex-grow">
-              {children} {/* This is where your page.tsx content will be rendered */}
-            </main>
-            {/* Footer is rendered globally here */}
-            <footer className="mt-20 py-8 text-center text-sm text-slate-500 bg-slate-100 text-slate-500 border-t border-slate-200">
-              © {new Date().getFullYear()} Cao Legal Solutions
-            </footer>
-          </body>
-        </html>
-      );
-    }
-    
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={`${inter.className} min-h-screen bg-slate-50 text-slate-800 flex flex-col`}>            {/* Navbar is rendered globally here */}
+        <Navbar />
+        {/* Main content area, padding-top to offset fixed navbar height (h-16 -> 4rem). */}
+        <main className="pt-10 flex-grow">
+          {children} {/* This is where your page.tsx content will be rendered */}
+        </main>
+        {/* Footer is rendered globally here */}
+        <footer className="mt-20 py-8 text-center text-sm text-slate-500 bg-slate-100 text-slate-500 border-t border-slate-200">
+          Liability limited by a scheme approved under Professional Standards Legislation
+        </footer>
+      </body>
+    </html>
+  );
+}

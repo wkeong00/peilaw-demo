@@ -3,19 +3,19 @@ import { Heart,Users, } from "lucide-react";
 
 const HomePage = () => {
   return (
-    <div className="bg-slate-50 text-slate-800">
+    <div className="bg-gradient-to-br from-yellow-50 to-white text-slate-800">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-800 to-blue-600 text-white py-24 md:py-32 overflow-hidden">
+  <section className="relative bg-gray-900 text-white py-24 md:py-32 overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
-            Your legal needs, <span className="text-blue-200">our trusted excellence.</span>
+          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
+            Your legal needs, <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">our trusted excellence.</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in-up">
-            Providing comprehensive and compassionate legal solutions tailored to your unique needs.
+            We offer more than legal solutions - we are here to listen with compassion, because your story matters. 
           </p>
           <a
             href="/contact"
-            className="inline-block bg-white text-blue-800 hover:bg-blue-100 font-semibold py-4 px-10 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl text-lg animate-scale-in"
+            className="inline-block bg-white text-gray-900 hover:bg-gray-100 font-semibold py-4 px-10 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl text-lg animate-scale-in"
           >
             Book an appointment
           </a>
@@ -34,20 +34,20 @@ const HomePage = () => {
       </section>
 
       {/* About Us Overview Section */}
-      <section className="py-20 bg-white text-slate-800 shadow-inner">
+  <section className="py-20 bg-white text-slate-800 shadow-inner">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-10 text-blue-800">
-            Who We <span className="text-blue-600">Are</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-10 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
+            Who We <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">Are</span>
           </h2>
           <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto mb-12">
-            At Cao Legal Solutions, you are more than just a case — you are heard, understood, and represented with integrity. Led by a principal lawyer from a migrant background, we bring a deep understanding of cultural diversity and lived experience into every matter we handle.
+            At Cao Legal Solutions, we ensure your story is heard and represented with integrity — because behind every story is a person in need of support. Led by a principal lawyer from a migrant background, we bring a broader understanding of cultural diversity and lived experience to every matter we handle.
           </p>
           <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto mb-12">
-            Whether you are navigating a complex legal issue, seeking guidance on your rights, or need someone who truly speaks your language — we are here to help.
+            Whether you are facing a complex legal issue, seeking advice about your rights, or simply need someone who truly speaks your language — we are here to help.
           </p>
           <a
             href="/about"
-            className="inline-block bg-blue-700 text-white hover:bg-blue-800 font-semibold py-3 px-8 rounded-lg shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-0.5"
+            className="inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
           >
             Learn More About Us
           </a>
@@ -55,35 +55,35 @@ const HomePage = () => {
       </section>
 
       {/* Our Values / Why Choose Us Section */}
-      <section className="py-20 bg-slate-50 text-slate-800">
+  <section className="py-20 bg-slate-50 text-slate-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-blue-800">
-            Why Choose <span className="text-blue-600">Us?</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
+           Our Culture, Mission <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">and Values</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-blue-100">
-              <div className="p-4 bg-blue-100 rounded-full mb-6 shadow-inner">
-                <Heart size={40} className="text-blue-500" />
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-yellow-400">
+              <div className="p-4 bg-gray-900 rounded-full mb-6 shadow-inner">
+                <Heart size={40} className="text-gray-300" />
               </div>
-              <h3 className="text-2xl font-bold text-blue-700 mb-4">Compassion</h3>
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">Compassion</h3>
               <p className="text-md leading-relaxed text-slate-700">
                 We listen closely and care deeply about your unique situation, ensuring you feel supported throughout your legal journey.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-blue-100">
-              <div className="p-4 bg-blue-100 rounded-full mb-6 shadow-inner">
-                <Users size={40} className="text-blue-500" />
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-yellow-400">
+              <div className="p-4 bg-gray-900 rounded-full mb-6 shadow-inner">
+                <Users size={40} className="text-gray-300" />
               </div>
-              <h3 className="text-2xl font-bold text-blue-700 mb-4">Leadership</h3>
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">Leadership</h3>
               <p className="text-md leading-relaxed text-slate-700">
                 Our experienced team takes charge with confidence and expertise, guiding you through complex legal challenges with clarity and vision.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-blue-100">
-              <div className="p-4 bg-blue-100 rounded-full mb-6 shadow-inner">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-yellow-400">
+              <div className="p-4 bg-gray-900 rounded-full mb-6 shadow-inner">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-300"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
               </div>
-              <h3 className="text-2xl font-bold text-blue-700 mb-4">Strength</h3>
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">Strength</h3>
               <p className="text-md leading-relaxed text-slate-700">
                 We stand firmly by your side, advocating with determination to protect your rights and secure the best outcome for you.
               </p>

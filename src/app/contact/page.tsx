@@ -29,31 +29,31 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-20 bg-slate-50 text-slate-800">
+        <section id="contact" className="py-20 bg-gradient-to-br from-yellow-50 to-white text-slate-800">
             <div className="container mx-auto px-4">
-                <h2 className="text-5xl font-extrabold text-center mb-16 text-blue-800 leading-tight">
-                    Get In <span className="text-blue-600">Touch</span>
+                <h2 className="text-5xl font-extrabold text-center mb-16 leading-tight bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
+                    Get In <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">Touch</span>
                 </h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white p-10 rounded-xl shadow-lg">
                     {/* Contact Information */}
                     <div className="flex flex-col justify-center">
-                        <h3 className="text-3xl font-bold text-blue-700 mb-6 border-b-4 border-blue-500 pb-2">Contact Information</h3>
+                        <h3 className="text-3xl font-bold mb-6 pb-2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent border-b-4 border-yellow-400">Contact Information</h3>
                         <p className="text-lg leading-relaxed mb-6">
                             Feel free to reach out to us with any questions or to schedule a free 30-minute consultation. Our team is ready to assist you.
                         </p>
                         <div className="space-y-6 text-lg">
                             <div className="flex items-center space-x-4">
-                                <Mail size={24} className="text-blue-600" />
-                                <span>info@caolegal.com.au</span>
+                                <Mail size={24} className="text-yellow-500" />
+                                <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent font-bold">info@caolegal.com.au</span>
                             </div>
                             <div className="flex items-center space-x-4">
-                                <Phone size={24} className="text-blue-600" />
-                                <span>0481 568 585</span>
+                                <Phone size={24} className="text-yellow-500" />
+                                <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent font-bold">0481 568 585</span>
                             </div>
                             <div className="flex items-start space-x-4">
-                                <MapPin size={24} className="text-blue-600 flex-shrink-0 mt-1" />
-                                <span>
+                                <MapPin size={24} className="text-yellow-500 flex-shrink-0 mt-1" />
+                                <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent font-bold">
                                     217 Flinders Street
                                     <br />
                                     Adelaide SA 5000
@@ -78,7 +78,7 @@ export default function Contact() {
 
                     {/* Contact Form */}
                     <div>
-                        <h3 className="text-3xl font-bold text-blue-700 mb-6 border-b-4 border-blue-500 pb-2">Send Us a Message</h3>
+                        <h3 className="text-3xl font-bold mb-6 pb-2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent border-b-4 border-yellow-400">Send Us a Message</h3>
                         <form onSubmit={onSubmit} className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-md font-medium text-slate-700 mb-2">Your Name</label>
@@ -87,7 +87,7 @@ export default function Contact() {
                                     id="name"
                                     name="name"
                                     required
-                                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all duration-200"
+                                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 outline-none transition-all duration-200"
                                     placeholder="John Doe"
                                 />
                             </div>
@@ -98,7 +98,7 @@ export default function Contact() {
                                     id="email"
                                     name="email"
                                     required
-                                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all duration-200"
+                                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 outline-none transition-all duration-200"
                                     placeholder="john.doe@example.com"
                                 />
                             </div>
@@ -109,7 +109,7 @@ export default function Contact() {
                                     id="subject"
                                     name="subject"
                                     required
-                                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all duration-200"
+                                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 outline-none transition-all duration-200"
                                     placeholder="Inquiry about Legal Services"
                                 />
                             </div>
@@ -120,18 +120,18 @@ export default function Contact() {
                                     name="message"
                                     rows={6}
                                     required
-                                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all duration-200 resize-y"
+                                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 outline-none transition-all duration-200 resize-y"
                                     placeholder="Type your message here..."
                                 ></textarea>
                             </div>
                             <button
                                 type="submit"
-                                className="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                className="w-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
                             >
                                 Send Message
                             </button>
                         </form>
-                        <span className="block mt-4 text-blue-700 font-semibold">{result}</span>
+                        <span className="block mt-4 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent font-bold">{result}</span>
                     </div>
                 </div>
             </div>
