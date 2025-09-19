@@ -40,7 +40,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Cao Legal Solutions',
-  description: 'Expert legal services for corporate, family, criminal, real estate, IP, and litigation needs.',
+  description: 'Your legal needs, our trusted excellence.',
 };
 
 export default function RootLayout({
@@ -50,6 +50,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/caologo.png" />
+      </head>
       <body className={`${inter.className} min-h-screen bg-slate-50 text-slate-800 flex flex-col`}>            {/* Navbar is rendered globally here */}
         <Navbar />
         {/* Main content area, padding-top to offset fixed navbar height (h-16 -> 4rem). */}

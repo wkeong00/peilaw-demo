@@ -60,6 +60,12 @@ const HomePage = () => {
           <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
            Our Culture, Mission <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">and Values</span>
           </h2>
+          <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto mb-12">
+            At Cao Legal Solutions, we are committed to embracing a culture of diversity and inclusiveness, where every client is valued, and we uphold justice and equality as fundamental principles in everything we do.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed max-w-4xl mx-auto mb-12">
+            We are committed to delivering justice in every case and that you feel supported and satisfied with our service.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-yellow-400">
               <div className="p-4 bg-gray-900 rounded-full mb-6 shadow-inner">

@@ -63,28 +63,6 @@ const Services = () => {
     );
 };
 
-//     <section id="services" className="py-20 bg-gradient-to-br from-yellow-50 to-white text-slate-800">
-//             <div className="container mx-auto px-4">
-//                 <h2 className="text-5xl font-extrabold text-center mb-16 leading-tight bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
-//                     Our <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">Practice Areas</span>
-//                 </h2>
-
-//                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
-//                     {lawServices.map((service, index) => (
-//                         <div
-//                             key={index}
-//                             className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-yellow-400"
-//                         >
-//                             <div className="p-4 bg-blue-100 rounded-full mb-6 shadow-inner">
-//                                 {service.icon}
-//                             </div>
-//                             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">{service.title}</h3>
-//                             <p className="text-md leading-relaxed text-slate-700">{service.description}</p>
-//                         </div>
-//                     ))}
-//                 </div>
-//             </div>
-//         </section>
 
 
 export default Services;
