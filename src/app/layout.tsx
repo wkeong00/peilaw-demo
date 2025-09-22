@@ -40,7 +40,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Cao Legal Solutions',
-  description: 'Your legal needs, our trusted excellence.',
+  description: 'At Cao Legal Solutions, we offer expert legal services in family law, employment law, property conveyancing and migration law. Led by a principal lawyer from a migrant background, we bring a broader understanding of cultural diversity and lived experience to every matter we handle.',
 };
 
 export default function RootLayout({
@@ -51,17 +51,28 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>Cao Legal Solutions</title>
+        <meta name="description" content="At Cao Legal Solutions, we offer expert legal services in family law, employment law, property conveyancing and migration law. Led by a principal lawyer from a migrant background, we bring a broader understanding of cultural diversity and lived experience to every matter we handle." />
+        {/* Open Graph for social sharing */}
+        <meta property="og:title" content="Cao Legal Solutions" />
+        <meta property="og:description" content="At Cao Legal Solutions, we offer expert legal services in family law, employment law, property conveyancing and migration law. Led by a principal lawyer from a migrant background, we bring a broader understanding of cultural diversity and lived experience to every matter we handle." />
+        <meta property="og:image" content="/caologo.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.caolegal.com.au/" />
+        {/* Twitter Card for social sharing */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Cao Legal Solutions" />
+        <meta name="twitter:description" content="At Cao Legal Solutions, we offer expert legal services in family law, employment law, property conveyancing and migration law. Led by a principal lawyer from a migrant background, we bring a broader understanding of cultural diversity and lived experience to every matter we handle." />
+        <meta name="twitter:image" content="/caologo.png" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="apple-touch-icon" href="/caologo.png" />
       </head>
-      <body className={`${inter.className} min-h-screen bg-slate-50 text-slate-800 flex flex-col`}>            {/* Navbar is rendered globally here */}
+      <body className={`${inter.className} min-h-screen bg-slate-50 text-slate-800 flex flex-col`}>
         <Navbar />
-        {/* Main content area, padding-top to offset fixed navbar height (h-16 -> 4rem). */}
         <main className="pt-10 flex-grow">
-          {children} {/* This is where your page.tsx content will be rendered */}
+          {children}
         </main>
-        {/* Footer is rendered globally here */}
         <footer className="mt-20 py-8 text-center text-sm text-slate-500 bg-slate-100 text-slate-500 border-t border-slate-200">
           Liability limited by a scheme approved under Professional Standards Legislation
         </footer>
