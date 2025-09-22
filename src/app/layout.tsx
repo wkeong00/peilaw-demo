@@ -64,6 +64,8 @@ export default function RootLayout({
         <meta name="twitter:title" content="Cao Legal Solutions" />
         <meta name="twitter:description" content="At Cao Legal Solutions, we offer expert legal services in family law, employment law, property conveyancing and migration law. Led by a principal lawyer from a migrant background, we bring a broader understanding of cultural diversity and lived experience to every matter we handle." />
         <meta name="twitter:image" content="/caologo.png" />
+        {/* Canonical tag for homepage */}
+        <link rel="canonical" href="https://www.caolegal.com.au/" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="apple-touch-icon" href="/caologo.png" />

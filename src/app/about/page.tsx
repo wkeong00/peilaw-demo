@@ -1,6 +1,12 @@
-'use client'; // Marking as client component for consistency, or if any future interactivity is added
 
 import React from 'react';
+export const metadata = {
+    title: 'About Cao Legal Solutions',
+    description: 'At Cao Legal Solutions, we offer expert legal services in family law, employment law, property conveyancing and migration law. Led by a principal lawyer from a migrant background, we bring a broader understanding of cultural diversity and lived experience to every matter we handle.',
+    alternates: {
+        canonical: 'https://www.caolegal.com.au/about',
+    },
+};
 import Image from "next/image";
 import pei1 from "../../../public/aboutphoto/peilingimg.jpg";
 
@@ -27,7 +33,7 @@ const About = () => {
     ];
 
     return (
-    <section id="about" className="py-20 bg-gradient-to-br from-yellow-50 to-white text-slate-800">
+        <section id="about" className="py-20 bg-gradient-to-br from-yellow-50 to-white text-slate-800">
             <div className="container mx-auto px-4">
                 <h2 className="text-5xl font-extrabold text-center mb-16 leading-tight bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
                     About <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">Cao Legal Solutions</span>
@@ -57,11 +63,6 @@ const About = () => {
                                     width={128}
                                     height={128}
                                     className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-yellow-400 shadow-md"
-                                    onError={(e) => {
-                                        const target = e.target as HTMLImageElement;
-                                        target.onerror = null;
-                                        target.src = "https://placehold.co/150x150/FFE066/000000?text=👤";
-                                    }} // Fallback image
                                 />
                                 <h4 className="text-2xl font-semibold mb-2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">{member.name}</h4>
                                 <p className="font-bold text-lg mb-4 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">{member.title}</p>
