@@ -1,6 +1,7 @@
 'use client'; // This component uses useState, so it must be a Client Component
 
 import React from 'react';
+import Image from 'next/image';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Contact() {
@@ -40,7 +41,7 @@ export default function Contact() {
                     <div className="flex flex-col justify-center">
                         <h3 className="text-3xl font-bold mb-6 pb-2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent border-b-4 border-yellow-400">Contact Information</h3>
                         <p className="text-lg leading-relaxed mb-6">
-                            Feel free to reach out to us with any questions or to schedule a free 30-minute consultation. Our team is ready to assist you.
+                            Feel free to reach out to us with any questions or to schedule an initial consultation. Our team is ready to assist you.
                         </p>
                         <div className="space-y-6 text-lg">
                             <div className="flex items-center space-x-4">
@@ -62,8 +63,20 @@ export default function Contact() {
                                 </span>
                             </div>
                         </div>
+                        {/* WeChat QR Code */}
+                        <div className="flex flex-col items-left mt-10">
+                            <Image
+                                src="/wechatqr.jpg"
+                                alt="Cao Legal Solutions WeChat QR"
+                                width={240}
+                                height={320}
+                                className="rounded-lg shadow-md mb-4"
+                                priority
+                            />
+                            <span className="text-slate-500 text-sm mb-2">Scan to add us on WeChat</span>
+                        </div>
                         {/* Map Placeholder */}
-                        <div className="mt-10 rounded-lg overflow-hidden shadow-md">
+                        <div className="mt-6 rounded-lg overflow-hidden shadow-md">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5558.455083115339!2d138.6088418!3d-34.9269507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0cece2009f969%3A0x278f62a34adf226e!2s217%20Flinders%20St%2C%20Adelaide%20SA%205000%2C%20Australia!5e1!3m2!1sen!2smy!4v1755967342497!5m2!1sen!2smy"
                                 width="100%"
