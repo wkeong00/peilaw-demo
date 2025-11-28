@@ -55,7 +55,7 @@ export default function Contact() {
                             <div className="flex items-start space-x-4">
                                 <MapPin size={24} className="text-yellow-500 flex-shrink-0 mt-1" />
                                 <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent font-bold">
-                                    217 Flinders Street
+                                    Suite 808/147 Pirie Street
                                     <br />
                                     Adelaide SA 5000
                                     <br />
@@ -78,14 +78,14 @@ export default function Contact() {
                         {/* Map Placeholder */}
                         <div className="mt-6 rounded-lg overflow-hidden shadow-md">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5558.455083115339!2d138.6088418!3d-34.9269507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0cece2009f969%3A0x278f62a34adf226e!2s217%20Flinders%20St%2C%20Adelaide%20SA%205000%2C%20Australia!5e1!3m2!1sen!2smy!4v1755967342497!5m2!1sen!2smy"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5558.535897010707!2d138.60257437741697!3d-34.92575777458004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0ced11647dedd%3A0x6eac9fc6e00e0e0b!2sUnit%20808%2F147%20Pirie%20St%2C%20Adelaide%20SA%205000%2C%20Australia!5e1!3m2!1sen!2smy!4v1764338001902!5m2!1sen!2smy"
                                 width="100%"
                                 height="300"
                                 style={{ border: 0 }}
                                 allowFullScreen={true}
                                 loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
+                                referrerPolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
                     </div>
 
