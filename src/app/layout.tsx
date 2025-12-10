@@ -56,19 +56,19 @@ export default function RootLayout({
         {/* Open Graph for social sharing */}
         <meta property="og:title" content="Cao Legal Solutions" />
         <meta property="og:description" content="At Cao Legal Solutions, we offer expert legal services in family law, employment law, property conveyancing and migration law. Led by a principal lawyer from a migrant background, we bring a broader understanding of cultural diversity and lived experience to every matter we handle." />
-        <meta property="og:image" content="/caologo.png" />
+        <meta property="og:image" content="/svh.svg" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.caolegal.com.au/" />
         {/* Twitter Card for social sharing */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cao Legal Solutions" />
         <meta name="twitter:description" content="At Cao Legal Solutions, we offer expert legal services in family law, employment law, property conveyancing and migration law. Led by a principal lawyer from a migrant background, we bring a broader understanding of cultural diversity and lived experience to every matter we handle." />
-        <meta name="twitter:image" content="/caologo.png" />
+        <meta name="twitter:image" content="/svh.svg" />
         {/* Canonical tag for homepage */}
         <link rel="canonical" href="https://www.caolegal.com.au/" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/caologo.png" />
+        <link rel="apple-touch-icon" href="/svh.svg" />
       </head>
       <body className={`${inter.className} min-h-screen bg-slate-50 text-slate-800 flex flex-col`}>
         <Navbar />
