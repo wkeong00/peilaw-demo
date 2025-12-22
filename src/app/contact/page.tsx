@@ -50,7 +50,7 @@ export default function Contact() {
                             </div>
                             <div className="flex items-center space-x-4">
                                 <Phone size={24} className="text-yellow-500" />
-                                <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent font-bold">0481 568 585</span>
+                                <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent font-bold">08 7094 0883</span>
                             </div>
                             <div className="flex items-start space-x-4">
                                 <MapPin size={24} className="text-yellow-500 flex-shrink-0 mt-1" />
