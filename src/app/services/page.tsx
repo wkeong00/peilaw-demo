@@ -21,8 +21,8 @@ const Services = () => {
             icon: <Gavel size={40} className="text-black-500" />,
         },
         {
-            title: 'Migration Law',
-            description: 'We assist clients with various visa applications, permanent residency processes, and appeals, navigating the complexities of Australian immigration law with expertise.',
+            title: 'Wills and Estate',
+            description: 'We assist with drafting clear and legally valid wills, establishing powers of attorney, creating enduring guardianship arrangements to ensure your wishes are respected, and applying for probate or letters of administration.',
             icon: <Building size={40} className="text-black-500" />,
         },
         {
