@@ -1,20 +1,23 @@
-'use client'; // This component uses useState, so it must be a Client Component
+'use client';
 
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import Link from "next/link";
 import Image from "next/image";
-import { Home, Info, Handshake, Mail } from "lucide-react";
-import { Playfair_Display } from 'next/font/google';
-
-// const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400', '700', '900'] });
-const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
-
+import { Home, Info, Handshake, Mail, Menu, X } from "lucide-react";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
-    const navLinks: { name: string; href: string; icon: React.ReactNode }[] = [
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const navLinks = [
         { name: 'Home', href: '/', icon: <Home size={18} /> },
         { name: 'About', href: '/about', icon: <Info size={18} /> },
         { name: 'Services', href: '/services', icon: <Handshake size={18} /> },
@@ -22,83 +25,97 @@ const Navbar = () => {
     ];
 
     return (
-    <nav className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-lg z-50">
-            <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+            scrolled 
+                ? 'bg-[#0a0a0a]/95 backdrop-blur-md shadow-lg shadow-black/20' 
+                : 'bg-transparent'
+        }`}>
+            <div className="container mx-auto px-4 py-3 flex justify-between items-center">
                 {/* Brand/Logo */}
-                <Link href="/" className="flex items-center space-x-2 text-2xl font-bold text-white tracking-wide">
-                    <Image src="/caologo.png" alt="Logo" width={82} height={82} />
-                    <span
-                        className="text-3xl font-extrabold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent tracking-wide drop-shadow-lg"
-                        style={{ letterSpacing: '2px' }}
-                    >
-                        Cao Legal Solutions
-                    </span>
+                <Link href="/" className="flex items-center space-x-3 group">
+                    <div className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-[#c9a962]/50 group-hover:border-[#c9a962] transition-all duration-300">
+                        <Image 
+                            src="/caologo.png" 
+                            alt="Cao Legal Solutions Logo" 
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                    <div className="hidden sm:block">
+                        <h1 className="text-xl font-bold tracking-wider">
+                            <span className="text-gold">CAO LEGAL</span>
+                        </h1>
+                        <p className="text-xs text-[#a0a0a0] tracking-widest uppercase">Solutions</p>
+                    </div>
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden md:flex flex-col items-end space-y-2">
-                    <div className="flex space-x-8">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                className="flex items-center space-x-2 font-medium px-3 py-2 rounded-lg"
-                                onClick={() => setIsOpen(false)}
-                            >
+                <div className="hidden md:flex items-center space-x-8">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            className="group relative flex items-center space-x-2 text-[#a0a0a0] hover:text-white transition-colors duration-300 py-2"
+                        >
+                            <span className="text-[#c9a962] group-hover:text-[#e8d5a3] transition-colors duration-300">
                                 {link.icon}
-                                <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent drop-shadow-lg text-lg font-bold tracking-wide" style={{ letterSpacing: '2px' }}>{link.name}</span>
-                            </Link>
-                        ))}
-                    </div>
-                    <div className="mt-2 text-right w-full">
-                        <span className="text-sm bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent font-bold tracking-wide drop-shadow-lg" style={{ letterSpacing: '1px' }}>
-                            © {new Date().getFullYear()} Cao Legal Solutions
-                        </span>
-                    </div>
+                            </span>
+                            <span className="text-sm font-medium tracking-wider uppercase">{link.name}</span>
+                            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-[#c9a962] to-[#e8d5a3] group-hover:w-full transition-all duration-300"></span>
+                        </Link>
+                    ))}
+                </div>
+
+                {/* CTA Button - Desktop */}
+                <div className="hidden md:block">
+                    <Link 
+                        href="/contact"
+                        className="btn-gold text-sm px-6 py-2.5"
+                    >
+                        Free Consultation
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded-md p-2"
+                    className="md:hidden text-white p-2 hover:text-[#c9a962] transition-colors duration-300"
                     onClick={() => setIsOpen(!isOpen)}
+                    aria-label="Toggle menu"
                 >
-                    {/* Using a simple SVG for the hamburger icon for consistency */}
-                    <svg
-                        className="w-8 h-8"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
-                        ></path>
-                    </svg>
+                    {isOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
             </div>
 
             {/* Mobile Menu */}
-                {isOpen && (
-                    <div className="md:hidden bg-gray-900 pb-4 shadow-inner flex flex-col items-center">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                className="block px-8 py-3 flex items-center space-x-3 text-lg"
-                                onClick={() => setIsOpen(false)}
-                            >
+            <div className={`md:hidden absolute top-full left-0 w-full bg-[#0a0a0a]/98 backdrop-blur-lg border-t border-[#c9a962]/20 transition-all duration-500 overflow-hidden ${
+                isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+            }`}>
+                <div className="container mx-auto px-4 py-6 flex flex-col space-y-4">
+                    {navLinks.map((link, index) => (
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            className="flex items-center space-x-3 text-[#a0a0a0] hover:text-white py-3 border-b border-white/5 hover:border-[#c9a962]/30 transition-all duration-300 group"
+                            onClick={() => setIsOpen(false)}
+                            style={{ animationDelay: `${index * 100}ms` }}
+                        >
+                            <span className="text-[#c9a962] group-hover:text-[#e8d5a3] transition-colors duration-300">
                                 {link.icon}
-                                <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent drop-shadow-lg font-bold tracking-wide" style={{ letterSpacing: '2px' }}>{link.name}</span>
-                            </Link>
-                        ))}
-                        <span className="mt-2 text-sm bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent font-bold tracking-wide drop-shadow-lg text-center w-full" style={{ letterSpacing: '1px' }}>
-                            © {new Date().getFullYear()} Cao Legal Solutions
-                        </span>
+                            </span>
+                            <span className="text-lg font-medium tracking-wider">{link.name}</span>
+                        </Link>
+                    ))}
+                    <div className="pt-4">
+                        <Link 
+                            href="/contact"
+                            className="btn-gold w-full text-center block py-3"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            Free Consultation
+                        </Link>
                     </div>
-                )}
+                </div>
+            </div>
         </nav>
     );
 };

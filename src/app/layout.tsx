@@ -75,8 +75,19 @@ export default function RootLayout({
         <main className="pt-10 flex-grow">
           {children}
         </main>
-        <footer className="mt-20 py-8 text-center text-sm text-slate-500 bg-slate-100 text-slate-500 border-t border-slate-200">
-          Liability limited by a scheme approved under Professional Standards Legislation
+        <footer className="py-12 bg-transparent">
+          <div className="container mx-auto px-4">
+            {/* Bottom section */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm border-t border-[#c9a962]/20 pt-8">
+              <p className="text-[#c9a962]/80 font-medium text-center md:text-left">
+                Liability limited by a scheme approved under Professional Standards Legislation
+              </p>
+              <span className="hidden md:block text-[#c9a962]/30">|</span>
+              <p className="text-[#c9a962]/60">
+                © {new Date().getFullYear()} Cao Legal Solutions. All rights reserved.
+              </p>
+            </div>
+          </div>
         </footer>
       </body>
     </html>
