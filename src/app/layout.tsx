@@ -34,7 +34,7 @@
 // }
 import './globals.css'; // Next.js's default global CSS with Tailwind directives
 import Navbar from './component/Navbar'; // Adjust path if your components folder is elsewhere
-    import { Inter } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -70,12 +70,12 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="apple-touch-icon" href="/svh.svg" />
       </head>
-      <body className={`${inter.className} min-h-screen bg-slate-50 text-slate-800 flex flex-col`}>
+      <body className={`${inter.className} min-h-screen bg-gray-950 text-gray-200 flex flex-col`}>
         <Navbar />
         <main className="pt-10 flex-grow">
           {children}
         </main>
-        <footer className="mt-20 py-8 text-center text-sm text-slate-500 bg-slate-100 text-slate-500 border-t border-slate-200">
+        <footer className="mt-20 py-8 text-center text-sm text-gray-400 bg-gray-900 border-t border-gray-800">
           Liability limited by a scheme approved under Professional Standards Legislation
         </footer>
       </body>

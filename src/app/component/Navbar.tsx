@@ -5,10 +5,9 @@ import React, { useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import { Home, Info, Handshake, Mail } from "lucide-react";
-import { Playfair_Display } from 'next/font/google';
+import { Cormorant_Garamond } from 'next/font/google';
 
-// const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400', '700', '900'] });
-const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
+const cormorant = Cormorant_Garamond({ subsets: ['latin'], weight: ['700'] });
 
 
 const Navbar = () => {
@@ -28,7 +27,7 @@ const Navbar = () => {
                 <Link href="/" className="flex items-center space-x-2 text-2xl font-bold text-white tracking-wide">
                     <Image src="/caologo.png" alt="Logo" width={82} height={82} />
                     <span
-                        className="text-3xl font-extrabold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent tracking-wide drop-shadow-lg"
+                        className={`${cormorant.className} text-3xl font-extrabold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent tracking-wide drop-shadow-lg`}
                         style={{ letterSpacing: '2px' }}
                     >
                         Cao Legal Solutions

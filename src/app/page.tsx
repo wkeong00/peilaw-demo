@@ -3,7 +3,7 @@ import { Heart,Users, } from "lucide-react";
 
 const HomePage = () => {
   return (
-    <div className="bg-gradient-to-br from-yellow-50 to-white text-slate-800">
+    <div className="bg-gray-950 text-gray-200">
       {/* Hero Section */}
   <section className="relative bg-gray-900 text-white py-24 md:py-32 overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -34,7 +34,7 @@ const HomePage = () => {
       </section>
 
       {/* About Us Overview Section */}
-  <section className="py-20 bg-white text-slate-800 shadow-inner">
+  <section className="py-20 bg-gray-900 text-gray-200 shadow-inner">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-10 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
             Who We <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">Are</span>
@@ -55,7 +55,7 @@ const HomePage = () => {
       </section>
 
       {/* Our Values / Why Choose Us Section */}
-  <section className="py-20 bg-slate-50 text-slate-800">
+  <section className="py-20 bg-gray-950 text-gray-200">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">
            Our Culture, Mission <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">and Values</span>
@@ -67,30 +67,30 @@ const HomePage = () => {
             We are committed to delivering justice in every case and that you feel supported and satisfied with our service.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-yellow-400">
-              <div className="p-4 bg-gray-900 rounded-full mb-6 shadow-inner">
-                <Heart size={40} className="text-gray-300" />
+            <div className="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-yellow-600/30">
+              <div className="p-4 bg-gray-800 rounded-full mb-6 shadow-inner">
+                <Heart size={40} className="text-yellow-500" />
               </div>
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">Compassion</h3>
-              <p className="text-md leading-relaxed text-slate-700">
+              <p className="text-md leading-relaxed text-gray-300">
                 We listen closely and care deeply about your unique situation, ensuring you feel supported throughout your legal journey.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-yellow-400">
-              <div className="p-4 bg-gray-900 rounded-full mb-6 shadow-inner">
-                <Users size={40} className="text-gray-300" />
+            <div className="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-yellow-600/30">
+              <div className="p-4 bg-gray-800 rounded-full mb-6 shadow-inner">
+                <Users size={40} className="text-yellow-500" />
               </div>
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">Leadership</h3>
-              <p className="text-md leading-relaxed text-slate-700">
+              <p className="text-md leading-relaxed text-gray-300">
                 Our experienced team takes charge with confidence and expertise, guiding you through complex legal challenges with clarity and vision.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-yellow-400">
-              <div className="p-4 bg-gray-900 rounded-full mb-6 shadow-inner">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-300"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+            <div className="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center border border-yellow-600/30">
+              <div className="p-4 bg-gray-800 rounded-full mb-6 shadow-inner">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-yellow-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
               </div>
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent">Strength</h3>
-              <p className="text-md leading-relaxed text-slate-700">
+              <p className="text-md leading-relaxed text-gray-300">
                 We stand firmly by your side, advocating with determination to protect your rights and secure the best outcome for you.
               </p>
             </div>
