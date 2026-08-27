@@ -9,9 +9,17 @@ export const metadata = {
 import Image from "next/image";
 import peiPho from "../../../public/aboutphoto/PeiPho.jpeg";
 import seraPho from "../../../public/aboutphoto/SeraPho.jpeg";
+import harryCao from "../../../public/aboutphoto/Harry_cao.jpeg";
+import jacobWang from "../../../public/aboutphoto/JacobWang.png";
 
 const About = () => {
     const teamMembers = [
+        {
+            name: 'Harry Cao',
+            title: 'Operations Manager',
+            bio: 'As an experienced Operations Manager with over 19 years of experience across financial services and the disability sector, Harry brings strong experience in operations, compliance, risk management and team leadership. His background has developed strong skills in business process improvement, attention to detail, problem-solving and building effective stakeholder relationships. Harry values a strengths-based and collaborative approach and is focused on supporting efficient, compliant and well-organised day-to-day operations.',
+            image: harryCao,
+        },
         {
             name: 'Pei Ling Cao',
             title: 'Principal',
@@ -23,6 +31,12 @@ const About = () => {
             title: 'Legal Assistant',
             bio: 'Seraphina is currently studying a Bachelor of Laws (Honours) and Philosophy at Adelaide University. She has a particular interest in family law, intellectual property law, and legal theory. Guided by a strong sense of integrity and justice, Seraphina is dedicated to approaching every client with the empathy, diligence, and consideration they deserve.',
             image: seraPho,
+        },
+        {
+            name: 'Jacob Wang',
+            title: 'Legal Assistant',
+            bio: 'Having grown up in China before moving to Adelaide, Jacob is currently completing a Bachelor of Laws (Honours). Fluent in both English and Mandarin, Jacob enjoys connecting with people from diverse backgrounds and brings an open, approachable and thoughtful manner to his work. Curious, honest and genuinely people-focused, Jacob values meaningful conversations and brings these qualities to his developing legal career and interactions with clients.',
+            image: jacobWang,
         },
     ];
 
