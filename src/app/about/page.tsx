@@ -15,16 +15,16 @@ import jacobWang from "../../../public/aboutphoto/JacobWang.png";
 const About = () => {
     const teamMembers = [
         {
-            name: 'Harry Cao',
-            title: 'Operations Manager',
-            bio: 'As an experienced Operations Manager with over 19 years of experience across financial services and the disability sector, Harry brings strong experience in operations, compliance, risk management and team leadership. His background has developed strong skills in business process improvement, attention to detail, problem-solving and building effective stakeholder relationships. Harry values a strengths-based and collaborative approach and is focused on supporting efficient, compliant and well-organised day-to-day operations.',
-            image: harryCao,
-        },
-        {
             name: 'Pei Ling Cao',
             title: 'Principal',
             bio: 'Pei Ling Cao is the Principal at Cao Legal Solutions, bringing a wealth of experience and a client-centered approach to every case. With a strong background in family law, Pei has also developed expertise across a diverse range of practice areas, including migration law, debt recovery, property conveyancing, and employment law. Fluent in English, Mandarin, Cantonese, and Bahasa, Pei is dedicated to bridging cultural and linguistic gaps, ensuring clear communication and effective representation for clients from diverse backgrounds. Driven by a commitment to serve the multicultural community, Pei founded Cao Legal Solutions to provide accessible and comprehensive legal services that address the unique needs of each client.',
             image: peiPho,
+        },
+        {
+            name: 'Harry Cao',
+            title: 'Operations Manager',
+            bio: 'As an experienced Operations Manager with over 19 years of experience across financial services and the disability sector, Harry brings strong experience in operations, compliance, risk management and team leadership. His background has developed strong skills in business process improvement, attention to detail, problem-solving and building effective stakeholder relationships. Harry values a strengths-based and collaborative approach and is focused on supporting efficient, compliant and well-organised day-to-day operations.',
+            image: harryCao,
         },
         {
             name: 'Seraphina Zhang',
