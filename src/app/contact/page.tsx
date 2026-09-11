@@ -1,12 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Mail, Phone, MapPin, X } from 'lucide-react';
 
 export default function Contact() {
     const [result, setResult] = React.useState("");
     const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+    const router = useRouter();
 
     const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -22,8 +24,7 @@ export default function Contact() {
         const data = await response.json();
 
         if (data.success) {
-            setResult("Form Submitted Successfully");
-            (event.target as HTMLFormElement).reset();
+            router.push('/contact/thankyou?action=message');
         } else {
             console.log("Error", data);
             setResult(data.message);
@@ -47,11 +48,23 @@ export default function Contact() {
                         <div className="space-y-6 text-lg">
                             <div className="flex items-center space-x-4">
                                 <Mail size={24} className="text-yellow-500" />
-                                <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent font-bold">info@caolegal.com.au</span>
+                                <a
+                                    href="/contact/thankyou?action=email"
+                                    onClick={(e) => { e.preventDefault(); router.push('/contact/thankyou?action=email'); }}
+                                    className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent font-bold hover:underline cursor-pointer"
+                                >
+                                    info@caolegal.com.au
+                                </a>
                             </div>
                             <div className="flex items-center space-x-4">
                                 <Phone size={24} className="text-yellow-500" />
-                                <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent font-bold">08 7094 0883</span>
+                                <a
+                                    href="/contact/thankyou?action=phone"
+                                    onClick={(e) => { e.preventDefault(); router.push('/contact/thankyou?action=phone'); }}
+                                    className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700 bg-clip-text text-transparent font-bold hover:underline cursor-pointer"
+                                >
+                                    08 7094 0883
+                                </a>
                             </div>
                             <div className="flex items-start space-x-4">
                                 <MapPin size={24} className="text-yellow-500 flex-shrink-0 mt-1" />

@@ -51,6 +51,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Tag Manager */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WL48VTG3');` }} />
+        {/* End Google Tag Manager */}
         <title>Cao Legal Solutions</title>
         <meta name="description" content="At Cao Legal Solutions, we offer expert legal services in family law, employment law, property conveyancing and migration law. Led by a principal lawyer from a migrant background, we bring a broader understanding of cultural diversity and lived experience to every matter we handle." />
         {/* Open Graph for social sharing */}
@@ -71,6 +78,10 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/svh.svg" />
       </head>
       <body className={`${inter.className} min-h-screen bg-gray-950 text-gray-200 flex flex-col`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL48VTG3"
+        height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
+        {/* End Google Tag Manager (noscript) */}
         <Navbar />
         <main className="pt-10 flex-grow">
           {children}
